@@ -1,0 +1,10 @@
+h1{
+  color: rgb(250, 2, 2);
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+a{
+  text-decoration: none;
+}
