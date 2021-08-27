@@ -3,8 +3,15 @@ h1{
   text-align: center;
   text-decoration: underline;
   text-transform: capitalize;
+  letter-spacing: 10px;
 }
 
 a{
   text-decoration: none;
+}
+
+p{
+  text-indent: 150px;
+  line-height: 5;
+  word-spacing: 20px;
 }
