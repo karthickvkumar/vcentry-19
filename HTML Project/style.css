@@ -40,3 +40,23 @@ p{
   background-size: 300px 200px;
   background-repeat: no-repeat;
 }
+
+.border{
+  /* border-style: solid; */
+  border-width: 3px;
+  /* border-color: red; */
+  border-top-style: double;
+  border-right-style: dashed;
+  border-bottom-style: solid;
+  border-left-style: dotted;
+
+  border-top-color: black;
+  border-right-color: red;
+  border-bottom-color: blueviolet;
+  border-left-color: chartreuse;
+}
+
+.short-border{
+  border: 3px solid blue;
+  border-radius: 10px;
+}
