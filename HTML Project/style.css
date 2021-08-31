@@ -3,7 +3,7 @@ h1{
   text-align: center;
   text-decoration: underline;
   text-transform: capitalize;
-  letter-spacing: 10px;
+  letter-spacing: 25px;
 }
 
 a{
@@ -32,4 +32,11 @@ p{
   width: 50%;
   height: 50%;
   background-color: black;
+}
+
+.bg{
+  /* background-color: burlywood; */
+  background-image: url("./shinchu.jpg");
+  background-size: 300px 200px;
+  background-repeat: no-repeat;
 }
