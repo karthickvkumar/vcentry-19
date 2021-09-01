@@ -54,6 +54,7 @@ p{
   border-right-color: red;
   border-bottom-color: blueviolet;
   border-left-color: chartreuse;
+  font-family: 'ZCOOL KuaiLe', cursive;
 }
 
 .short-border{
@@ -65,4 +66,6 @@ p{
   padding-bottom: 50px;
   margin-top: 50px;
   margin-left: 75px;
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
 }
