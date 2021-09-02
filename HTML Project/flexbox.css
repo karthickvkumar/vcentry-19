@@ -1,0 +1,10 @@
+.main-container{
+  height: 300px;
+  border: 3px solid;
+}
+
+.child{
+  height: 100px;
+  border: 3px solid red;
+  width: 100px;
+}
