@@ -1,0 +1,11 @@
+.big-colum{
+  border: 3px solid red;
+  height: 36vh;
+}
+
+.small-colum{
+  border: 3px solid red;
+  height: 20vh;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
