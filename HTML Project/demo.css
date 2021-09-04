@@ -1,6 +1,8 @@
 .big-colum{
   border: 3px solid red;
   height: 36vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .small-colum{
@@ -8,4 +10,24 @@
   height: 20vh;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.colum-1-row-1{
+  border: 3px solid black;
+  width: 25%;
+}
+
+.colum-1-row-2{
+  border: 3px solid blue;
+  width: 75%;
+}
+
+.main-heading{
+  border: 3px solid green;
+  height: 35%;
+}
+
+.main-sub-heading{
+  border: 3px solid #00ff28;
+    height: 61%;
 }
