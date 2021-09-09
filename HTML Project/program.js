@@ -24,7 +24,14 @@ value -> {
 }
 */
 
-var student_Information = {
+var student_Information_1 = {
+  name : 'karthick',
+  name : 'karthick',
+  age : 27,
+  roll_no : 47589,
+  result : true 
+};
+var student_Information_2 = {
   name : 'karthick',
   age : 27,
   roll_no : 47589,
@@ -55,3 +62,34 @@ console.log(student_Information);
 //To delete a particular value from Object -> delete object_variable_name.key;
 delete student_Information.result;
 console.log(student_Information);
+
+// Array
+// Syntax - var array_variable_name = [value1, value2, value3,...,valueN ];
+var record_list = [
+  {
+    name: 'xpshj',
+    age: 45
+  },
+  {
+    name: 'sfsd',
+    age: 78
+  },
+  {
+    name : 'erter',
+    age : 45
+  }
+];
+
+/*Operations in Array (4) 
+  1. To read a value from Array
+  2. To edit a value from Array
+  3. To add new value to Array 
+  4. To delete a particular value from Array 
+*/
+
+// To read a value from Array - array_variable_name[index];
+console.log(record_list[0].name)
+
+// To edit a value from Array - array_variable_name[index] = value;
+record_list[0].name = "karthick";
+console.log(record_list)
