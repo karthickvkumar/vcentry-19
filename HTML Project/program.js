@@ -24,19 +24,14 @@ value -> {
 }
 */
 
-var student_Information_1 = {
+var student_Information = {
   name : 'karthick',
   name : 'karthick',
   age : 27,
   roll_no : 47589,
   result : true 
 };
-var student_Information_2 = {
-  name : 'karthick',
-  age : 27,
-  roll_no : 47589,
-  result : true 
-};
+
 console.log(student_Information);
 
 /*Operations in Object (4) 
@@ -93,3 +88,32 @@ console.log(record_list[0].name)
 // To edit a value from Array - array_variable_name[index] = value;
 record_list[0].name = "karthick";
 console.log(record_list)
+
+/*
+Function -> Block of code 
+Syntax : (Function Definition)
+
+function function_name(){
+  // Code Block
+};
+
+function_name -> Proper text value -> a-z, A-Z, 0-9, $, _
+
+To Run/Execute a Function :
+Syntax : (Function Call/ Function Invocation)
+
+function_name();
+
+*/
+
+function on_display(){
+  var number_1 = 25;
+  var number_2 = 35;
+  var result = number_1 + number_2;
+  console.log(result);
+};
+
+function on_login(){
+  var name = "karthick kumar";
+  console.log("The username is ", name);
+}
