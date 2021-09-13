@@ -93,7 +93,7 @@ console.log(record_list)
 Function -> Block of code 
 Syntax : (Function Definition)
 
-function function_name(){
+function function_name(var_name_1, var_name_2, ... var_name_N){  // argument
   // Code Block
 };
 
@@ -102,11 +102,11 @@ function_name -> Proper text value -> a-z, A-Z, 0-9, $, _
 To Run/Execute a Function :
 Syntax : (Function Call/ Function Invocation)
 
-function_name();
+function_name(value1, value2, ... valueN); //parameter
 
 */
 
-function on_display(){
+function on_addition(){
   var number_1 = 25;
   var number_2 = 35;
   var result = number_1 + number_2;
@@ -114,6 +114,6 @@ function on_display(){
 };
 
 function on_login(){
-  var name = "karthick kumar";
+  var name = prompt("Please enter a valid username");
   console.log("The username is ", name);
 }
