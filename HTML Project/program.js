@@ -129,3 +129,12 @@ function on_login(){
   var name = prompt("Please enter a valid username");
   console.log("The username is ", name);
 }
+
+/*
+Operators 
+ 1. Arithmetic Operator --> +, -, *, **, /, %, ++, --
+ 2. Assignment Operator --> = 
+ 3. Comprasion Operator --> ==, ===, <, <=, >, >=, !=, !==
+ 4. Logical Operator --> &&, ||, ! 
+
+ */
