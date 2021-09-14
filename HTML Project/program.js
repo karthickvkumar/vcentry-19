@@ -89,6 +89,16 @@ console.log(record_list[0].name)
 record_list[0].name = "karthick";
 console.log(record_list)
 
+/* To add new value to Array-> 
+  1. array_variable_name.push(value);  --> Insert last in array
+  2. array_variable_name.unshift(value); --> Insert first in array
+*/
+record_list.unshift({ name : "Yuvi", age : 30});
+record_list.push({ name : "kumar", age : 27});
+
+//To delete a particular value from Array  -> array_variable_name.splice(index, deleteCount);
+record_list.splice(2, 1);
+
 /*
 Function -> Block of code 
 Syntax : (Function Definition)
@@ -107,9 +117,11 @@ function_name(value1, value2, ... valueN); //parameter
 */
 
 function on_addition(){
-  var number_1 = 25;
-  var number_2 = 35;
-  var result = number_1 + number_2;
+  var number_1 = prompt("Enter Number 1 value");
+  var value_1 = parseInt(number_1);
+  var number_2 = prompt("Enter Number 2 value");
+  var value_2 = parseInt(number_2);
+  var result = value_1 + value_2;
   console.log(result);
 };
 
