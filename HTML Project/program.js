@@ -165,3 +165,38 @@ Operators
    }
 
  }
+
+ /*
+Syntax - Multiple IF-ELSE
+if(condition 1){
+  // code block 1
+}
+else if(condition 2){
+   // code block 2
+}
+else{
+   // code block 3
+}
+
+Problem : Check the age category of a person
+1. Read number value, during program execution (prompt)
+2. If age is less than 18, Print The user is Minor
+3. If age is greater than or equal to 18 and age is less than 60, print Major
+4. If age is greater than 60, print super citizen
+*/
+
+function check_age_category(){
+  var value = prompt('Enter a user age');
+  var age = parseInt(value);
+
+  if(age < 18){
+    console.log("The user is Minor");
+  }
+  else if(age >= 18 && age < 60){
+    console.log("The user is Major");
+  }
+  else{
+    console.log("The user is Super Citizen");
+  }
+
+}
