@@ -135,6 +135,33 @@ Operators
  1. Arithmetic Operator --> +, -, *, **, /, %, ++, --
  2. Assignment Operator --> = 
  3. Comprasion Operator --> ==, ===, <, <=, >, >=, !=, !==
- 4. Logical Operator --> &&, ||, ! 
+ 4. Logical Operator --> &&, ||, ! (AND, OR, NOT)
+ 
 
+ Syntax : IF-ELSE
+ if(condition){
+   // Code block 1
+ }
+ else{
+   // Code block 2
+ }
+
+ Problem : Check whether given age is eligible for Voting
+ 1. Read number value, during program execution (prompt)
+ 2. Condition : Age should be greater than or equal to 18
+ 3. If age is greater then 18, print Eligible for Vote
+ 4. If age is less then 18, print Not Eligible for Vote
  */
+
+ function check_voting_age(){
+   var value = prompt('Enter a user age...');
+   var age = parseInt(value);
+   
+   if(age >= 18){
+      console.log("Eligible for Vote");
+   }
+   else{
+     console.log("Not Eligible for Vote");
+   }
+
+ }
