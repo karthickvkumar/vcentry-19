@@ -200,3 +200,26 @@ function check_age_category(){
   }
 
 }
+/*
+Syntax : FOR LOOP
+for(initialization; condition; increment/decrement){
+  // Code Block
+}
+
+Program : Read a number and Print Even numbers till that Nth number. 
+Steps : 
+1. Read a number value during progarm Run (prompt)
+2. Logic - Number % 2 -> 0
+3. Use for loop for finding the limit of number
+*/
+
+function print_even_numbers(){
+  var value = prompt("Enter a number value");
+  var number = parseInt(value);
+
+  for(var limit = 1; limit <= number; limit++){
+    if(limit % 2 === 0){
+      console.log("The even number is", limit)
+    }
+  }
+}
