@@ -223,3 +223,65 @@ function print_even_numbers(){
     }
   }
 }
+
+/*Syntax : FOR IN
+for(var variable_name in object_variable_name){
+
+}*/
+
+for(var key in student_Information){
+  console.log(student_Information[key])
+}
+
+/*Syntax : FOR OF
+for(var variable_name of array_variable_name){
+
+}*/
+
+for(var value of record_list){
+  console.log(value)
+}
+
+/*Syntax :While
+while(condition){
+
+}*/
+
+var count = 1;
+while(count <= 10){
+  console.log("The count is ", count);
+  count++
+}
+
+/*Syntax : DO While
+do{
+
+}while(condition)*/
+var count = 1;
+do{
+  console.log("The count is ", count);
+  count++
+}while(count <= 10)
+
+
+/*Syntax - Switch 
+switch(expression){
+  case value 1:
+    //code block
+    break;
+  case value 2:
+    //code block
+    break;
+  default :
+    // code block
+}*/
+
+
+switch(2){
+  case 1 :
+      console.log("This is ONE");
+      break;
+  case 2 : 
+      console.log("This is TWO");
+      break;
+}
