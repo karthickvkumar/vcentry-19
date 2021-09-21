@@ -285,3 +285,26 @@ switch(2){
       console.log("This is TWO");
       break;
 }
+var stduent_last_name = "Kumar"; // Global Scope - Access within the File
+var stduent_reg_no;
+
+function display(){
+  var stduent = "Karthick Kumar";  //Local Scope - Access within the Function
+  console.log("Hello everyone! ", stduent_last_name, " here!")
+  stduent_reg_no = 5784696; // Automatic Global - Access within the File
+  console.log(stduent_reg_no)
+}
+
+function print_name(){
+  try{
+    console.log(stduent_last_name);
+    console.log(stduent_reg_no)
+    console.log(stduent)
+    console.log(name)
+    alert("Success")
+  }
+  catch(exception){
+    console.log(exception);
+    alert("Sorry, Please try later")
+  }
+} 
