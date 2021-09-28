@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginPage from './pages/login';
 
 class App extends Component{
 
@@ -12,7 +13,8 @@ class App extends Component{
       <div>
         <h1 className="heading">Hello To React JS... Welcome</h1>
         <h1 className="sub-heading">This is a App.js Component</h1>
-        <button onClick={() => this.display() }>Click this Button</button>
+        <button onClick={() => this.display()}>Click this Button</button>
+        <LoginPage></LoginPage>
       </div>
     )
   }
