@@ -10,3 +10,18 @@
 .image{
   width: 200px;
 }
+
+.label{
+  font-size: 20px;
+    display: inline-block;
+    width: 200px;
+}
+
+.input{
+  width: 250px;
+  font-size: 20px;
+}
+
+.space-bottom{
+  margin-bottom: 10px;
+}
