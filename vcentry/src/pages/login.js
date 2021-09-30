@@ -12,7 +12,14 @@ class LoginPage extends Component{
 
   onHandleInput = (event) => {
     //Property Method
-    console.log(event.target.value)
+    //console.log(event.target.value, event.target.name)
+    this.setState({
+      [event.target.name] : event.target.value
+    })
+  }
+
+  onSubmit(){
+    console.log(this.state)
   }
 
   render(){
@@ -22,16 +29,21 @@ class LoginPage extends Component{
         <img src={require("../image/shinchu.jpg").default} className="image" 
         alt="profile"/>
 
-        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F2020-Chevrolet-Corvette-Stingray%2F960x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349" alt="profile" className="image" />
+        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F2020-Chevrolet-Corvette-Stingray%2F960x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349"alt="profile" className="image" />
+
         <div className="space-bottom">
           <label className="label">Enter your Email ID :</label>
-          <input className="input" type="email" placeholder="Please enter your email id.." onChange={this.onHandleInput}/>
+          <input className="input" type="email" placeholder="Please enter your email id.." onChange={this.onHandleInput} name="username"/>
         </div>
         <div className="space-bottom">
           <label className="label">Enter your Password :</label>
-          <input className="input"  type="password" placeholder="Please enter your password.." onChange={this.onHandleInput}/>
+          <input className="input"  type="password" placeholder="Please enter your password.." onChange={this.onHandleInput} name="password"/>
         </div>
-        <button>Login</button>
+        <button onClick={() => this.onSubmit()}>Login</button>
+        <div>
+          <h1>Your email id is {this.state.username}</h1>
+          <h1>Your password is {this.state.password}</h1>
+        </div>
       </div>
     )
   }
