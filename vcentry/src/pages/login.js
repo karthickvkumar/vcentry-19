@@ -6,7 +6,8 @@ class LoginPage extends Component{
     super(props);
     this.state = {
       username : '',
-      password : ''
+      password : '',
+      isVisible : true
     }
   }
 
@@ -22,14 +23,40 @@ class LoginPage extends Component{
     console.log(this.state)
   }
 
+  showImage(){
+    this.setState({
+      isVisible : true
+    })
+  }
+
+  hideImage(){
+    this.setState({
+      isVisible : false
+    })
+  }
+
   render(){
+
+    let name = "Karhick Kumar";
+    let roll_number = 47521485;
+    let student = {
+      name : "John Smith",
+      location : "London"
+    }
+
     return(
       <div id="login-page">
         <h1>Login Page</h1>
-        <img src={require("../image/shinchu.jpg").default} className="image" 
-        alt="profile"/>
+        <button onClick={() => this.showImage()}>Show Image</button>
+        <button onClick={() => this.hideImage()}>Hide Image</button>
 
-        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F2020-Chevrolet-Corvette-Stingray%2F960x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349"alt="profile" className="image" />
+        { this.state.isVisible && <div>
+              <img src={require("../image/shinchu.jpg").default} className="image" 
+            alt="profile"/>
+
+            <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F2020-Chevrolet-Corvette-Stingray%2F960x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349"alt="profile" className="image" />
+          </div>}
+        
 
         <div className="space-bottom">
           <label className="label">Enter your Email ID :</label>
@@ -44,6 +71,10 @@ class LoginPage extends Component{
           <h1>Your email id is {this.state.username}</h1>
           <h1>Your password is {this.state.password}</h1>
         </div>
+
+        <h1>sdnfsdnf {name}</h1>
+        <h1>{roll_number}</h1>
+        <h1>{student.location} -- {student.name}</h1>
       </div>
     )
   }
