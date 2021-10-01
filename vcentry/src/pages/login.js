@@ -7,7 +7,8 @@ class LoginPage extends Component{
     this.state = {
       username : '',
       password : '',
-      isVisible : true
+      isVisible : true,
+      showPassword : false
     }
   }
 
@@ -32,6 +33,12 @@ class LoginPage extends Component{
   hideImage(){
     this.setState({
       isVisible : false
+    })
+  }
+
+  showPassword(status){
+    this.setState({
+      showPassword : status
     })
   }
 
@@ -65,6 +72,15 @@ class LoginPage extends Component{
         <div className="space-bottom">
           <label className="label">Enter your Password :</label>
           <input className="input"  type="password" placeholder="Please enter your password.." onChange={this.onHandleInput} name="password"/>
+          
+        { this.state.showPassword ?  
+          <img src={require("../image/open-eye.png").default} className="icon"
+          onClick={() => this.showPassword(false)}/>
+          :
+          <img src={require("../image/close-eye.png").default} className="icon"
+          onClick={() => this.showPassword(true)}/>
+        }
+
         </div>
         <button onClick={() => this.onSubmit()}>Login</button>
         <div>
