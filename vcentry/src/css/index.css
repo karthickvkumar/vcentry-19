@@ -31,3 +31,12 @@
   width: 25px;
   cursor: pointer;
 }
+
+.border-red{
+  border: 3px solid red;
+}
+
+.align-flex{
+  display: flex;
+  flex-direction: row;
+}

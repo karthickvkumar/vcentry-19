@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import LoginPage from './pages/login';
 
 class App extends Component{
@@ -10,12 +13,11 @@ class App extends Component{
 
   render(){
     return(
-      <div>
-        <h1 className="heading">Hello To React JS... Welcome</h1>
-        <h1 className="sub-heading">This is a App.js Component</h1>
-        <button onClick={() => this.display()}>Click this Button</button>
-        <LoginPage></LoginPage>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login" component={LoginPage}></Route>
+        </Switch>
+      </BrowserRouter>
     )
   }
 

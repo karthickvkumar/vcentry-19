@@ -69,16 +69,18 @@ class LoginPage extends Component{
           <label className="label">Enter your Email ID :</label>
           <input className="input" type="email" placeholder="Please enter your email id.." onChange={this.onHandleInput} name="username"/>
         </div>
-        <div className="space-bottom">
+        <div className="space-bottom align-flex">
           <label className="label">Enter your Password :</label>
-          <input className="input"  type="password" placeholder="Please enter your password.." onChange={this.onHandleInput} name="password"/>
+          <input className={this.state.showPassword ? "input border-red" : "input"}  
+          type={this.state.showPassword ? "text" : "password"}  
+          placeholder="Please enter your password.." onChange={this.onHandleInput} name="password"/>
           
         { this.state.showPassword ?  
           <img src={require("../image/open-eye.png").default} className="icon"
-          onClick={() => this.showPassword(false)}/>
+          onClick={() => this.showPassword(false)} alt=""/>
           :
           <img src={require("../image/close-eye.png").default} className="icon"
-          onClick={() => this.showPassword(true)}/>
+          onClick={() => this.showPassword(true)} alt=""/>
         }
 
         </div>
