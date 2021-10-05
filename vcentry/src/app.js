@@ -3,18 +3,15 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import LoginPage from './pages/login';
+import HomePage from './pages/home';
 
 class App extends Component{
-
-  display(){
-    let value = prompt("Enter a value...")
-    console.log(value);
-  }
 
   render(){
     return(
       <BrowserRouter>
         <Switch>
+          <Route path="/" exact component={HomePage}></Route>
           <Route path="/login" component={LoginPage}></Route>
         </Switch>
       </BrowserRouter>
