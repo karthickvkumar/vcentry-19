@@ -22,6 +22,8 @@ class LoginPage extends Component{
 
   onSubmit(){
     console.log(this.state)
+    
+    this.props.history.push("/signup");
   }
 
   showImage(){

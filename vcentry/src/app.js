@@ -6,6 +6,7 @@ import LoginPage from './pages/login';
 import HomePage from './pages/home';
 import RegisterPage from './pages/register';
 import ContactPage from './pages/contact';
+import MailPage from './pages/mail';
 
 class App extends Component{
 
@@ -17,6 +18,7 @@ class App extends Component{
           <Route path="/login" component={LoginPage}></Route>
           <Route path="/signup" component={RegisterPage}></Route>
           <Route path="/contact" component={ContactPage}></Route>
+          <Route path="/mail" component={MailPage}></Route>
         </Switch>
       </BrowserRouter>
     )
