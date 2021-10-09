@@ -16,19 +16,23 @@ class MailPage extends Component{
           <div className="sidebar">
 
             <div>
-              <NavLink to="/mail/inbox" className="button">Go to Inbox Page</NavLink>
+              <NavLink to="/mail/inbox" className="button" 
+              activeClassName="active-btn">Go to Inbox Page</NavLink>
             </div>
 
             <div>
-              <NavLink to="/mail/sent" className="button">Go to Sent Page</NavLink>
+              <NavLink to="/mail/sent" className="button" 
+              activeClassName="active-btn">Go to Sent Page</NavLink>
             </div>
 
             <div>
-              <NavLink to="/mail/draft" className="button">Go to Draft Page</NavLink>
+              <NavLink to="/mail/draft" className="button" 
+              activeClassName="active-btn">Go to Draft Page</NavLink>
             </div>
 
             <div>
-              <NavLink to="/mail/trash" className="button">Go to Trash Page</NavLink>
+              <NavLink to="/mail/trash" className="button" 
+              activeClassName="active-btn">Go to Trash Page</NavLink>
             </div>
 
           </div>
