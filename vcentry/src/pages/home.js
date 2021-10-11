@@ -29,7 +29,15 @@ class HomePage extends Component{
   render(){
     const user = this.state.userList.map((value, index) => {
       return(
-        <h1 key={index}>{value.first_name}</h1>
+        <tr key={index}>
+            <td>{value.id}</td>
+            <td>{value.first_name}</td>
+            <td>{value.last_name}</td>
+            <td>{value.email}</td>
+            <td>
+              <img src={value.avatar} />
+            </td>
+          </tr>
       )
     })
 
@@ -41,7 +49,20 @@ class HomePage extends Component{
         <NavLink to="/login">Go for Login</NavLink>
         <br/>
         <button onClick={() => this.onLoadAPI()}>Trigger GET API</button>
-        {user}
+        <table id="customers">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Picture</th>
+            </tr>
+          </thead>
+          <tbody>
+            {user}
+          </tbody>
+        </table>
       </div>
     )
   }
