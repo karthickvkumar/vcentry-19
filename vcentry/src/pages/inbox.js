@@ -18,7 +18,18 @@ class InboxPage extends Component{
   }
 
   onSubmimtUser(){
-    console.log(this.state)
+    const url = "https://reqres.in/api/users";
+
+    axios.post(url, this.state)
+      .then((response) => {
+        const serverData = response.data;
+        console.log(serverData);
+        alert("Successfully User Profile has been created")
+      })
+      .catch((error) => {
+        console.log(error)
+        alert("Something went wrong, pls try agina later...")
+      })
   }
 
   render(){
