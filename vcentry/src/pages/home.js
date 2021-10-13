@@ -35,7 +35,7 @@ class HomePage extends Component{
             <td>{value.last_name}</td>
             <td>{value.email}</td>
             <td>
-              <img src={value.avatar} />
+              <img src={value.avatar} alt=""/>
             </td>
           </tr>
       )
