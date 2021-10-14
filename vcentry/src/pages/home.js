@@ -26,6 +26,10 @@ class HomePage extends Component{
       })
   }
 
+  componentDidMount(){
+    this.onLoadAPI();
+  }
+
   render(){
     const user = this.state.userList.map((value, index) => {
       return(
