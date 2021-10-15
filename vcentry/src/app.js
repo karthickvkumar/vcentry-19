@@ -8,6 +8,8 @@ import RegisterPage from './pages/register';
 import ContactPage from './pages/contact';
 import MailPage from './pages/mail';
 
+import "./css/materialize.css";
+
 class App extends Component{
 
   render(){

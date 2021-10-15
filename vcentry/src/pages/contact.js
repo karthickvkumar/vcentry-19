@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {NavLink} from 'react-router-dom';
+import Header from '../components/header';
 
 class ContactPage extends Component{
 
@@ -49,6 +50,7 @@ class ContactPage extends Component{
 
     return(
       <div>
+        <Header></Header>
         <h1>This is a Contact Page !!</h1>
         <h1>Welcome, {this.state.username}</h1>
         <button onClick={() => this.onChangeUser()}>Change User</button>

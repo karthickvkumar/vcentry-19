@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../components/header';
 
 class LoginPage extends Component{
 
@@ -55,6 +56,7 @@ class LoginPage extends Component{
 
     return(
       <div id="login-page">
+        <Header></Header>
         <h1>Login Page</h1>
         <button onClick={() => this.showImage()}>Show Image</button>
         <button onClick={() => this.hideImage()}>Hide Image</button>

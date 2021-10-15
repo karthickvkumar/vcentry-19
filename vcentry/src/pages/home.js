@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {NavLink} from 'react-router-dom'; 
 import axios from 'axios';
+import Header from '../components/header';
 
 class HomePage extends Component{
 
@@ -47,10 +48,13 @@ class HomePage extends Component{
 
     return(
       <div>
+        <Header></Header>
         <h1>This is a Home Page !!</h1>
         <NavLink to="/contact">Go to Contact Page</NavLink>
         <br />
-        <NavLink to="/login">Go for Login</NavLink>
+        <NavLink to="/login">Go for Login Page</NavLink>
+        <br/>
+        <NavLink to="/signup">Go for Register Page</NavLink>
         <br/>
         <button onClick={() => this.onLoadAPI()}>Trigger GET API</button>
         <table id="customers">
