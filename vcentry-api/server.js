@@ -52,6 +52,29 @@ app.get("/api/user/list", (request, response) => {
     response.status(200).send(result);
 
   });
+});
+
+app.post("/api/user/create", (request, response) => {
+
+  const firstName = request.body.first_name;
+  const lastName = request.body.last_name;
+  const designation = request.body.designation;
+  const age = request.body.age;
+  const location = request.body.location;
+  const salary = request.body.salary;
+
+  const query = `INSERT INTO employee_information (first_name, last_name, designation,age, location, salary) VALUES ('${firstName}', '${lastName}', '${designation}', ${age}, '${location}', ${salary})`;
+
+  connection.query(query, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+      return;
+    }
+
+    response.status(200).send({
+      message : "Successfully Created a New User Profile"
+    })
+  })
 
 });
 
