@@ -39,7 +39,21 @@ connection.connect((error) => {
   }
 })
 
+app.get("/api/user/list", (request, response) => {
 
+  const query = `SELECT * FROM employee_information`;
+
+  connection.query(query, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+      return;
+    }
+
+    response.status(200).send(result);
+
+  });
+
+});
 
 
 
