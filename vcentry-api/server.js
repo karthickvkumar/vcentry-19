@@ -75,11 +75,50 @@ app.post("/api/user/create", (request, response) => {
       message : "Successfully Created a New User Profile"
     })
   })
-
 });
 
+app.put("/api/user/edit/:id", (request, response) => {
+  const id = request.params.id;
+
+  const firstName = request.body.first_name;
+  const lastName = request.body.last_name;
+  const designation = request.body.designation;
+  const age = request.body.age;
+  const location = request.body.location;
+  const salary = request.body.salary;
+
+  const query = `UPDATE employee_information SET first_name='${firstName}', last_name='${lastName}', designation='${designation}', age=${age}, location='${location}', salary=${salary} WHERE id=${id}`;
+
+  connection.query(query, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+      return;
+    }
+
+    response.status(200).send({
+      message : "Updated the User Profile information"
+    })
+  })
+
+})
 
 
+app.delete("/api/user/delete/:id", (request, response) => {
+  const id = request.params.id;
+
+  const query = `DELETE FROM employee_information WHERE id=${id}`;
+
+  connection.query(query, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+      return;
+    }
+
+    response.status(200).send({
+      message : "Successfully User Profile has been deleted"
+    })
+  })
+});
 
 
 const port = process.env.PORT || 8080;
