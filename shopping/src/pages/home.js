@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import axios from 'axios';
 import Header from '../components/header';
 import ImageSlider from '../components/image-slider';
 import Product from '../components/product';
@@ -7,6 +7,35 @@ import ProductPreview from "../components/product-preview";
 import Footer from '../components/footer';
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+      preview: {
+        topSelling: [],
+        recentlyViewed: [],
+        topNew: []
+      }
+    }
+  }
+
+  componentDidMount() {
+    const productURL = "https://shop143.herokuapp.com/telebuy/api/products/latest";
+    const previewURL = "https://shop143.herokuapp.com/telebuy/api/product/preview";
+
+    const requestProduct = axios.get(productURL);
+    const requestPreview = axios.get(previewURL);
+
+    axios.all([requestProduct, requestPreview]).then(axios.spread((...responses) => {
+      this.setState({
+        products: responses[0].data,
+        preview: responses[1].data
+      });
+    })).catch((errors) => {
+      console.error(errors)
+    })
+  }
+
   render() {
     return (
       <div>
@@ -21,10 +50,7 @@ class HomePage extends Component {
                 <div className="latest-product">
                   <h2 className="section-title">Latest Products</h2>
                   <div className="product-carousel">
-                    <Product></Product>
-                    <Product></Product>
-                    <Product></Product>
-                    <Product></Product>
+                    <Product products={this.state.products}></Product>
                   </div>
                 </div>
               </div>
@@ -73,27 +99,21 @@ class HomePage extends Component {
                 <div class="single-product-widget">
                   <h2 class="product-wid-title">Top Sellers</h2>
                   <a href="" class="wid-view-more">View All</a>
-                  <ProductPreview></ProductPreview>
-                  <ProductPreview></ProductPreview>
-                  <ProductPreview></ProductPreview>
+                  <ProductPreview preview={this.state.preview.topSelling}></ProductPreview>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="single-product-widget">
                   <h2 class="product-wid-title">Recently Viewed</h2>
                   <a href="#" class="wid-view-more">View All</a>
-                  <ProductPreview></ProductPreview>
-                  <ProductPreview></ProductPreview>
-                  <ProductPreview></ProductPreview>
+                  <ProductPreview preview={this.state.preview.recentlyViewed}></ProductPreview>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="single-product-widget">
                   <h2 class="product-wid-title">Top New</h2>
                   <a href="#" class="wid-view-more">View All</a>
-                  <ProductPreview></ProductPreview>
-                  <ProductPreview></ProductPreview>
-                  <ProductPreview></ProductPreview>
+                  <ProductPreview preview={this.state.preview.topNew}></ProductPreview>
                 </div>
               </div>
             </div>
