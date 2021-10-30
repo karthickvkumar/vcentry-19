@@ -93,7 +93,6 @@ text-transform: uppercase;
 width: 100%;
 z-index: 999;
 height: 75px;
-position: fixed;
 }
 
 
@@ -737,7 +736,7 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
     border: 1px solid #ddd;
     padding: 10px;
 }
-input[type="submit"], button[type=submit] {
+input[type="submit"], button[type=submit], input[type="button"] {
     background: none repeat scroll 0 0 #5a88ca;
     border: medium none;
     color: #fff;
