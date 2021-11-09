@@ -1,6 +1,28 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
 
 class Product extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      productList : []
+    }
+  }
+
+  seeDetail(value){
+    this.props.history.push("/product", value.id);
+  }
+
+  addProduct(value){
+    this.state.productList.push(value);
+    this.setState({
+      productList : this.state.productList
+    })
+    localStorage.setItem("product-list", JSON.stringify(this.state.productList));
+  }
+
+
   render() {
     let products = this.props.products.map((value, index) => {
       return (
@@ -9,9 +31,9 @@ class Product extends Component {
             <div className="product-f-image">
               <img src={value.image} alt="" />
               <div className="product-hover">
-                <a href="#" className="add-to-cart-link"><i className="fa fa-shopping-cart"></i> Add to
+                <a onClick={() => this.addProduct(value)} href="#" className="add-to-cart-link"><i className="fa fa-shopping-cart"></i> Add to
                   cart</a>
-                <a className="view-details-link"><i
+                <a onClick={() => this.seeDetail(value)} className="view-details-link"><i
                   className="fa fa-link"></i> See details</a>
               </div>
             </div>
@@ -35,4 +57,4 @@ class Product extends Component {
   }
 }
 
-export default Product;
+export default withRouter(Product);

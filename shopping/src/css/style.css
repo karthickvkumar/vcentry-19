@@ -429,6 +429,7 @@ height: 75px;
     width: 75%;
     z-index: 99;
     transition: .4s;
+    cursor: pointer;
 }
 .product-hover a:hover {
   background: #000;
